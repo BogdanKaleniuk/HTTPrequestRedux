@@ -22,7 +22,7 @@ export default combineReducers({
   error,
 });
 
-// 🔥 ИСПОЛЬЗУЕТ IMMER ДЛЯ МУТАЦИИ КОПИИ СОСТОЯНИЯ
+// 🔥 ИСПОЛЬЗУЕТ IMMER ДЛЯ МУТАЦИИ КОПИИ СОСТОЯНИЯ!
 // const booksSlice = createSlice({
 //   name: 'books',
 //   initialState: { entities: [], isLoading: false, error: null },
