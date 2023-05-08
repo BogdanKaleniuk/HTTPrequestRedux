@@ -4,6 +4,7 @@ import slugify from 'slugify';
 import { useSelector, useDispatch } from 'react-redux';
 import { booksOperations, booksSelectors } from 'redux/books';
 import PageHeading from 'components/PageHeading/PageHeading';
+import { GoChecklist } from 'react-icons/go';
 
 const makeSlug = string => slugify(string, { lower: true });
 
@@ -25,7 +26,9 @@ export default function BooksView() {
             <li key={book.id}>
               <Link
                 to={{
-                  pathname: `${url}/${makeSlug(`${book.title} ${book.id}`)}`,
+                  pathname: `${url}/${makeSlug(
+                    `${book.name} ${book.phone} ${book.id}`,
+                  )}`,
                   state: {
                     from: {
                       location,
@@ -34,7 +37,12 @@ export default function BooksView() {
                   },
                 }}
               >
-                {book.title}
+                Category: {book.name}
+                <GoChecklist styled="color: green" />
+                <br />
+                <hr />
+                <img width={300} src={`${book.photos} `} alt="" />
+                <img width={300} src={`${book.avatar} `} alt="" />
               </Link>
             </li>
           ))}

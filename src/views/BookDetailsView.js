@@ -24,10 +24,8 @@ export default function BookDetailsView() {
           </Link>
           <hr />
 
-          <img src={book.imgUrl} alt={book.title} />
-          <h2>{book.title}</h2>
-          <p>Автор: {book.author.name}</p>
-          <p>{book.descr}</p>
+          <img width={600} src={`${book.photos} `} alt="name" />
+          <h2>{book.name}</h2>
         </>
       )}
     </>

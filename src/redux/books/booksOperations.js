@@ -6,6 +6,8 @@ export const fetchBooks = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const books = await bookShelfAPI.fetchBooks();
+      console.log('все ок, загрузилось');
+
       return books;
     } catch (error) {
       return rejectWithValue(error);
